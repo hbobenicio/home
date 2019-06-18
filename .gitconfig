@@ -1,0 +1,30 @@
+[user]
+    email = hbobenicio@gmail.com
+    name = hbobenicio
+
+[core]
+    editor = vim
+
+[diff]
+    tool = meld
+[difftool]
+    prompt = false
+[difftool "meld"]
+    cmd = meld "$LOCAL" "$REMOTE"
+
+[merge]
+    tool = meld
+[mergetool]
+    # don't create backup *.orig files
+    keepBackup = false    
+[mergetool "meld"]
+    # Choose one of these 2 lines (not both!) explained below.
+    #  - $MERGED is the partially merged file with the merge conflict information in it.
+    #  - $BASE is the shared commit ancestor of $LOCAL and $REMOTE, this is to say the file
+    #    as it was when the branch containing $REMOTE was originally created.
+    #
+    #cmd = meld "$LOCAL" "$MERGED" "$REMOTE" --output "$MERGED"
+    #
+    cmd = meld "$LOCAL" "$BASE" "$REMOTE" --output "$MERGED"
+
+
