@@ -16,15 +16,6 @@ if [ -n "$BASH_VERSION" ]; then
     fi
 fi
 
-function add_to_path() {
-    local newpath="$1"
-
-    if [ -d $newpath ]; then
-        PATH="$newpath:$PATH"
-	export PATH
-    fi
-}
-
 function add_to_path {
   local newpath="$1"
 
