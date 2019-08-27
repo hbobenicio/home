@@ -1,10 +1,23 @@
 [user]
     email = hbobenicio@gmail.com
     name = hbobenicio
-
+    
+    # gpg --full-gen-key
+    # gpg --list-secret-keys --keyid-format LONG
+    # gpg --armor --export $YOUR_KEY_ID (campo sec)
+    # git config --global user.signingkey $YOUR_KEY_ID
+    signingkey = AE4607A047715B6B
+    
 [core]
     editor = vim
-
+[gpg]
+    # sudo apt install gpg gnupg2
+    # git config --global gpg.program gpg2
+    program = gpg2
+[commit]
+    # git config --global commit.gpgsign true
+    gpgsign = true
+        
 [diff]
     tool = meld
 [difftool]
@@ -26,5 +39,3 @@
     #cmd = meld "$LOCAL" "$MERGED" "$REMOTE" --output "$MERGED"
     #
     cmd = meld "$LOCAL" "$BASE" "$REMOTE" --output "$MERGED"
-
-
