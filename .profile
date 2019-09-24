@@ -35,7 +35,7 @@ add_to_path "$HOME/Qt/5.11.1/gcc_64/bin"
 
 # ASDF-VM
 . $HOME/.asdf/asdf.sh
-. $HOME/.asdf/completions/asdf.bash
+# . $HOME/.asdf/completions/asdf.bash
 
 # NVM
 export NVM_DIR="$HOME/.nvm"
