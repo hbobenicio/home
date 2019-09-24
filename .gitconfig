@@ -2,10 +2,7 @@
     email = hbobenicio@gmail.com
     name = hbobenicio
     
-    # gpg --full-gen-key
-    # gpg --list-secret-keys --keyid-format LONG
-    # gpg --armor --export $YOUR_KEY_ID (campo sec)
-    # git config --global user.signingkey $YOUR_KEY_ID
+    # https://gist.github.com/hbobenicio/1e86275064f8273827e6ac2358044986
     signingkey = AE4607A047715B6B
     
 [core]
