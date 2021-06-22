@@ -1,14 +1,37 @@
-set bg=dark
-set listchars=eol:¬,tab:=>,trail:~,space:·
+"""""""""""""""""""""""""
+" General configurations "
+""""""""""""""""""""""""""
 
-filetype plugin indent on
+set relativenumber
+"set number
 
-" show existing tab with 4 spaces width
 set tabstop=4
-
-" when identing with '>', use 4 spaces width
 set shiftwidth=4
-
-" on pressing tab, insert 4 spaces
+set softtabstop=4
 set expandtab
+set shiftround  
+set smarttab    
+set autoindent  
+set copyindent 
 
+" File specific configurations
+autocmd FileType make setlocal noexpandtab
+
+" vim-plug (https://github.com/junegunn/vim-plug)
+call plug#begin('~/.vim/plugged')
+  " vim-polyglot seems to be having problems with Java...
+  Plug 'sheerun/vim-polyglot'
+
+  Plug 'joshdick/onedark.vim'
+  Plug 'itchyny/lightline.vim'
+  let g:lightline = { 
+      \   'colorscheme': 'onedark',
+      \ }
+  set laststatus=2
+  set noshowmode
+  
+  Plug 'preservim/nerdtree'
+  Plug 'junegunn/fzf', { 'do': { -> fzf#install() } } 
+call plug#end()
+
+colorscheme onedark
